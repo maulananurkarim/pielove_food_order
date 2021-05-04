@@ -44,7 +44,11 @@ class _HomeState extends State<Home> {
                     ),
                     Text(
                       "Pie Details",
-                      style: TextStyle(color: Colors.white),
+                      style: GoogleFonts.poppins(
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                     IconButton(
                       icon: Image.asset(
@@ -56,7 +60,11 @@ class _HomeState extends State<Home> {
                     ),
                   ],
                 ),
-                Container(),
+                Container(
+                  color: Colors.red,
+                  height: 90,
+                  width: 90,
+                ),
               ],
             ),
           ),
