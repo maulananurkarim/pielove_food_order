@@ -87,9 +87,11 @@ class Home extends StatelessWidget {
                   children: [
                     Text(
                       "DoubleJumbo Pie",
+                      style: GoogleFonts.poppins(textStyle: titleTextStyle),
                     ),
                     Text(
                       "IDR 59.999",
+                      style: GoogleFonts.poppins(textStyle: subtitleTextStyle),
                     ),
                     SizedBox(
                       height: 10,
@@ -132,12 +134,15 @@ class Home extends StatelessWidget {
                     ),
                     Text(
                       "Description",
+                      style: GoogleFonts.poppins(
+                          textStyle: titleTextStyle.copyWith(fontSize: 14)),
                     ),
                     SizedBox(
                       height: 4,
                     ),
                     Text(
                       "Cream Sweet Pie is a pie made from real honey \nand combined with cream on top of the pie",
+                      style: GoogleFonts.poppins(textStyle: contentTextStyle),
                     ),
                     SizedBox(
                       height: 30,
@@ -148,6 +153,11 @@ class Home extends StatelessWidget {
                         ButtonQuantity(),
                         Text(
                           "IDR 119.998",
+                          style: GoogleFonts.poppins(
+                            textStyle: subtitleTextStyle.copyWith(
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
                         ),
                       ],
                     ),
@@ -161,6 +171,11 @@ class Home extends StatelessWidget {
                         onPressed: () {},
                         child: Text(
                           "Checkout Now",
+                          style: GoogleFonts.poppins(
+                            textStyle: subtitleTextStyle.copyWith(
+                              color: Colors.white,
+                            ),
+                          ),
                         ),
                         style: ElevatedButton.styleFrom(
                           primary: orangeColor,

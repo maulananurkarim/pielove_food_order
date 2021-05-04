@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:pielove_food_order/theme.dart';
 
 class ButtonQuantity extends StatefulWidget {
   const ButtonQuantity({Key key}) : super(key: key);
@@ -27,6 +29,10 @@ class _ButtonQuantityState extends State<ButtonQuantity> {
         ),
         Text(
           quantity.toString(),
+          style: GoogleFonts.poppins(
+            textStyle:
+                subtitleTextStyle.copyWith(fontSize: 14, color: blueColor),
+          ),
         ),
         SizedBox(
           width: 10,

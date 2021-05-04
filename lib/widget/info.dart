@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:pielove_food_order/theme.dart';
 
 class Info extends StatelessWidget {
   final String imgUrl;
@@ -20,6 +22,7 @@ class Info extends StatelessWidget {
         ),
         Text(
           info,
+          style: GoogleFonts.poppins(textStyle: contentTextStyle),
         ),
       ],
     );
