@@ -34,22 +34,29 @@ class _HomeState extends State<Home> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Image.asset(
-                      "assets/BACK_BUTTON.png",
-                      height: 14,
-                      width: 8,
+                    IconButton(
+                      icon: Image.asset(
+                        "assets/BACK_BUTTON.png",
+                        height: 14,
+                        width: 8,
+                      ),
+                      onPressed: () {},
                     ),
                     Text(
                       "Pie Details",
                       style: TextStyle(color: Colors.white),
                     ),
-                    Image.asset(
-                      "assets/LOVE_BUTTON.png",
-                      height: 18,
-                      width: 20,
+                    IconButton(
+                      icon: Image.asset(
+                        "assets/LOVE_BUTTON.png",
+                        height: 18,
+                        width: 20,
+                      ),
+                      onPressed: () {},
                     ),
                   ],
                 ),
+                Container(),
               ],
             ),
           ),
