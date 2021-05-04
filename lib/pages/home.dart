@@ -168,7 +168,14 @@ class Home extends StatelessWidget {
                       height: 55,
                       width: double.infinity,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (BuildContext context) => Cart(),
+                            ),
+                          );
+                        },
                         child: Text(
                           "Checkout Now",
                           style: GoogleFonts.poppins(
