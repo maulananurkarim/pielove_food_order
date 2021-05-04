@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
-// ignore: must_be_immutable
 class ButtonQuantity extends StatefulWidget {
-  // const ButtonQuantity({Key key}) : super(key: key);
+  const ButtonQuantity({Key key}) : super(key: key);
 
   @override
   _ButtonQuantityState createState() => _ButtonQuantityState();
