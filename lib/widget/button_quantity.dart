@@ -1,22 +1,44 @@
 import 'package:flutter/material.dart';
 
-class ButtonQuantity extends StatelessWidget {
-  const ButtonQuantity({Key key}) : super(key: key);
+// ignore: must_be_immutable
+class ButtonQuantity extends StatefulWidget {
+  // const ButtonQuantity({Key key}) : super(key: key);
 
+  @override
+  _ButtonQuantityState createState() => _ButtonQuantityState();
+}
+
+int quantity = 1;
+
+class _ButtonQuantityState extends State<ButtonQuantity> {
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         IconButton(
           icon: Image.asset("assets/REDUCE_QUANTITY_BTN.png"),
-          onPressed: () {},
+          onPressed: () {
+            setState(() {
+              quantity != 1 ? quantity-- : quantity = 1;
+            });
+          },
+        ),
+        SizedBox(
+          width: 10,
         ),
         Text(
-          "20",
+          quantity.toString(),
+        ),
+        SizedBox(
+          width: 10,
         ),
         IconButton(
           icon: Image.asset("assets/ADD_QUANTITY_BTN.png"),
-          onPressed: () {},
+          onPressed: () {
+            setState(() {
+              quantity++;
+            });
+          },
         ),
       ],
     );
