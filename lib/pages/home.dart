@@ -12,62 +12,128 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Container(
-          width: double.infinity,
-          height: 460,
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage("assets/PICT.png"),
-              fit: BoxFit.fill,
-            ),
-          ),
-          child: Padding(
-            padding: const EdgeInsets.only(
-              right: 30,
-              left: 30,
-            ),
-            child: Column(
-              children: [
-                SizedBox(
-                  height: 20,
+        backgroundColor: Colors.white,
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              width: double.infinity,
+              height: 460,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage("assets/PICT.png"),
+                  fit: BoxFit.fill,
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    IconButton(
-                      icon: Image.asset(
-                        "assets/BACK_BUTTON.png",
-                        height: 14,
-                        width: 8,
-                      ),
-                      onPressed: () {},
+              ),
+              child: Column(
+                children: [
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                      right: 30,
+                      left: 30,
                     ),
-                    Text(
-                      "Pie Details",
-                      style: GoogleFonts.poppins(
-                        color: Colors.white,
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        IconButton(
+                          icon: Image.asset(
+                            "assets/BACK_BUTTON.png",
+                            height: 14,
+                            width: 8,
+                          ),
+                          onPressed: () {},
+                        ),
+                        Text(
+                          "Pie Details",
+                          style: GoogleFonts.poppins(
+                            color: Colors.white,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        IconButton(
+                          icon: Image.asset(
+                            "assets/LOVE_BUTTON.png",
+                            height: 18,
+                            width: 20,
+                          ),
+                          onPressed: () {},
+                        ),
+                      ],
+                    ),
+                  ),
+                  Spacer(),
+                  Container(
+                    height: 30,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(30),
+                        topRight: Radius.circular(30),
                       ),
                     ),
-                    IconButton(
-                      icon: Image.asset(
-                        "assets/LOVE_BUTTON.png",
-                        height: 18,
-                        width: 20,
-                      ),
-                      onPressed: () {},
-                    ),
-                  ],
-                ),
-                Container(
-                  color: Colors.red,
-                  height: 90,
-                  width: 90,
-                ),
-              ],
+                  ),
+                ],
+              ),
             ),
-          ),
+            Padding(
+              padding: const EdgeInsets.only(
+                left: 30,
+                right: 30,
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "DoubleJumbo Pie",
+                  ),
+                  Text(
+                    "IDR 59.999",
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Container(
+                    height: 50,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: Color(0xffF6F5FF),
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(4),
+                      ),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.only(
+                        left: 16,
+                        right: 16,
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Info(
+                            imgUrl: "assets/icon_dollar.png",
+                            info: "Free Delivery",
+                          ),
+                          Info(
+                            imgUrl: "assets/Subtract.png",
+                            info: "20 - 30",
+                          ),
+                          Info(
+                            imgUrl: "assets/Star.png",
+                            info: "4.5",
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
         ),
       ),
     );
